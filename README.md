@@ -11,11 +11,11 @@ We train four different models.
 - 
 First train with SimCLR framework:
 
-`python run.py --epochs 500 --dropout 0`
+```python run.py --epochs 500 --dropout 0```
 Then finetune the corresponding ckpt:
 - if using '-limit', this means we are not adding dropout layers.
 
-`python finetune.py -limit -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
+```finetune.py -limit -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]```
 
 ## 2. CL+ dropout model
 - set dropout rate to not equal to 0 to add dropout.
@@ -24,23 +24,23 @@ Then finetune the corresponding ckpt:
 
 - then finetune:
 
-`python finetune.py -dropout 0.1 -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
+```python finetune.py -dropout 0.1 -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]```
 
 
 ## 3. Vanilla MC dropout model
 train a vanilla resnet-18 with dropout.
 
-`python mcdrop.py -ckpt [ckpt name] `
+```python mcdrop.py -ckpt [ckpt name] ```
 
 ## 4. MC dropout model with extra data augmentations:
 
-`python mcdrop.py -ckpt [ckpt name] -use_aug`
+```python mcdrop.py -ckpt [ckpt name] -use_aug```
 
 ## 5. Inference time
 - In util_inference.py, change the path to the four models in function **load_four_models**.
 - In inference.py, uncomment corresponding 'main_' functions to run inference for different plots.
 [main_plot_roc, main_visualize_ood_gradcam, main_plot_pgd_saliency, main_aug_curve, plot_tsne_all_dataset, main_show_aug_effects]
 
-`python inference.py`
+```python inference.py```
 
 
