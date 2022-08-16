@@ -3,10 +3,9 @@ Individual Project for MSc in AI &amp; ML at Imperial College London
 
 Despite we reserve the options to use Cifar10, we didn't test the program with this dataset and use STL10 throughout the project. We suggest to run with STL10 first and it is already set as default.
 
-To train SimCLR models:
+We train four different models.
 
-
-## Vanilla CL model
+## 1. Vanilla CL model
 - set dropout rate to 0 to avoid adding dropout layers.
 - certain paths to datasets might need to be changed manually inside the code. (default path to save ckpt should be changed in func get_log_dir of util.py )
 - 
@@ -18,7 +17,7 @@ Then finetune the corresponding ckpt:
 
 `python finetune.py -limit -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
 
-## CL+ dropout model
+## 2. CL+ dropout model
 - set dropout rate to not equal to 0 to add dropout.
 
 `python run.py --epochs 500 --dropout 0.1`
@@ -28,12 +27,12 @@ Then finetune the corresponding ckpt:
 `python finetune.py -dropout 0.1 -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
 
 
-## Vanilla MC dropout model
+## 3. Vanilla MC dropout model
 train a vanilla resnet-18 with dropout.
 
 `python mcdrop.py -ckpt [ckpt name] `
 
-## MC dropout model with extra data augmentations:
+## 4. MC dropout model with extra data augmentations:
 
 `python mcdrop.py -ckpt [ckpt name] -use_aug`
 
