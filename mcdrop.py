@@ -154,10 +154,12 @@ def main():
                     choices=['resnet18', 'resnet50'],
                     help='model architecture')
     parser.add_argument('-ckpt', default='wd3',
-                        help='path to ckpt dir')               
+                        help='path to ckpt dir')     
+    parser.add_argument('--use_aug', action='store_true',
+                        help='Whether use extra aug')         
     args = parser.parse_args()
 
-    train_loader, test_loader = get_stl10_data_loaders(download=True, use_aug=False)
+    train_loader, test_loader = get_stl10_data_loaders(download=True, use_aug=args.use_aug)
     print("Dataset:", args.dataset_name, 'Datset dir', args.data)
 
     train(args.epochs, train_loader, test_loader, args.arch, args.ckpt)

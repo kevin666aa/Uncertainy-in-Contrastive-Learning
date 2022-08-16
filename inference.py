@@ -425,15 +425,8 @@ def main():
     # main_visualize_ood_gradcam(MODELS, num_imgs=10, forward_passes=args.fp)
     # main_visualize_aug_gradcam(MODELS, num_imgs=5, forward_passes=args.fp)
 
-    main_plot_pgd_saliency(MODELS, args, 20)
-    # test_loader = get_aug_loader('no aug')
-    # for model in MODELS:
-    #     t, d, acc, _= get_monte_carlo_predictions('aa',
-    #                                 test_loader, 
-    #                                 forward_passes=args.fp, 
-    #                                 model=model,  # !
-    #                                 n_classes=10, 
-    #                                 n_samples=len(test_loader.dataset))
+    # main_plot_pgd_saliency(MODELS, args, 20)
+
 
     # main_aug_curve(MODELS, args)
     # main_show_aug_effects()

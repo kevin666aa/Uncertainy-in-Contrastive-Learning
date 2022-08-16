@@ -65,7 +65,7 @@ def get_log_dir(args, suffix=''):
     #         '_bs' + str(args.batch_size) + \
     #         '_' + args.aug
     n = '/vol/bitbucket/yw2621/outputs/' + 'CL_' + args.arch + \
-            '_dropout' + str(args.dropout) + '_cutout'
+            '_dropout' + str(args.dropout)
     return n + suffix
 
 
