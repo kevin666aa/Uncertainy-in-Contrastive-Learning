@@ -15,16 +15,16 @@ First train with SimCLR framework:
 `python run.py --epochs 500 --dropout 0`
 Then finetune the corresponding ckpt:
 - if using '-limit', this means we are not adding dropout layers.
-- 
+
 `python finetune.py -limit -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
 
 ## CL+ dropout model
 - set dropout rate to not equal to 0 to add dropout.
-- 
+
 `python run.py --epochs 500 --dropout 0.1`
 
 - then finetune:
-- 
+
 `python finetune.py -dropout 0.1 -ckpt [path to ckpt to be loaded] -saveckpt [ckpt to be save after finetuning]`
 
 
