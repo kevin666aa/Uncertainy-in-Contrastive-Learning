@@ -37,7 +37,10 @@ train a vanilla resnet-18 with dropout.
 `python mcdrop.py -ckpt [ckpt name] -use_aug`
 
 ## 5. Inference time
-In inference.py, uncomment corresponding 'main_' functions to run inference for different plots.
+- In util_inference.py, change the path to the four models in function **load_four_models**.
+- In inference.py, uncomment corresponding 'main_' functions to run inference for different plots.
 [main_plot_roc, main_visualize_ood_gradcam, main_plot_pgd_saliency, main_aug_curve, plot_tsne_all_dataset, main_show_aug_effects]
 
 `python inference.py`
+
+
