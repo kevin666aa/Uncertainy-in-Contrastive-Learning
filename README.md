@@ -1,6 +1,6 @@
 # Uncertainy-in-Contrastive-Learning
 
-Author: Yiran Wu
+Author: Yiran Wu          
 Supervisor: Yingzhen Li
 
 Individual Project for MSc in Artificial Intelligence &amp; Machine Learning at Imperial College London.
